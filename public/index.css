@@ -1,0 +1,238 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.profile-container {
+    background: linear-gradient(180deg, #1e272e);
+    height: 930px;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.profile-container .nav {
+    display: flex;
+    justify-content: right;
+    gap: 50px;
+    width: 100%;
+    margin-bottom: 5%;
+    padding: 15px;
+    position: fixed;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(126, 121, 121, 0.597);
+    box-shadow: -1px 1px 30px 10px rgba(0, 0, 0, 0.63);
+    overflow: hidden;
+}
+
+.profile-container a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.profile-container a:hover {
+    transform: translatey(-15%);
+    border-bottom: 3px solid #fff;
+    overflow: hidden;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.profile-detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.profile-detail img {
+    height: 300px;
+    width: 300px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: -1px 1px 20px 1px rgb(207, 212, 45);
+
+}
+
+.profile-detail .box {
+    text-align: center;
+    padding: 10px;
+    margin-top: 30%;
+}
+
+.profile-detail h3 {
+    text-decoration: underline;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 2%;
+    color: #fff;
+}
+
+.profile-detail p {
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: #fff;
+}
+
+.profile-detail h1,
+.profile-detail h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: aqua;
+}
+
+/*end*/
+
+/*skill card*/
+
+.topic {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    color: #fff;
+    background-color: #1e272e;
+    padding: 10px;
+}
+
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+    background-color: #1e272e;
+    gap: 100px;
+    margin-top: -100px;
+    padding: 8%;
+}
+
+.skill-container .wrapper {
+    perspective: 3000px;
+}
+
+.skill-container .card {
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform .8s ease-in-out;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+        -5px -5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.skill-container .card:hover {
+    transform: rotateY(180deg);
+}
+
+.skill-container .back-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+
+.skill-container .front-page {
+    position: absolute;
+    background-image: url(image/html.jpg);
+    background-size: 350px;
+    background-color: black;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+
+.skill-container .card-info {
+    position: absolute;
+    bottom: 40px;
+    left: 3px;
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.skill-container .card-title {
+    font-style: 2rem;
+    font-weight: bold;
+}
+
+.skill-container .card-subtitle {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    color: #0fbcf9;
+}
+
+.skill-container .back-page {
+    background-color: #1e272e;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.skill-container .card-content {
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+}
+
+.skill-container .card-content h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.skill-container .card-description {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/*end*/
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: linear-gradient(180deg,#1e272e);
+    text-align: center;
+    height: 1000px;
+    z-index: -1;
+    overflow: hidden;
+    padding: 50px;
+}
+
+.about-container .about-box {
+    margin-top: 10%;
+    padding: 20px;
+    border-radius: 40px;
+    background-color: black;
+}
+
+.about-container .about-box h2,
+p {
+    font-family: 'Times New Roman', Times, serif;
+    color: aqua;
+}
+
+.about-container .about-box .social-media .icon i {
+    font-size: 50px;
+    color: white;
+    margin-top: 20px;
+}
+
+.about-box .topic {
+    margin-bottom: 50px;
+    border-radius: 50px;
+    text-decoration: none;
+}
