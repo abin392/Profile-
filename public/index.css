@@ -16,7 +16,7 @@
     gap: 50px;
     width: 100%;
     margin-bottom: 5%;
-    padding: 15px;
+    padding: 10px;
     position: fixed;
     right: 0;
     z-index: 1;
@@ -34,7 +34,7 @@
 
 .profile-container a:hover {
     transform: translatey(-15%);
-    border-bottom: 3px solid #fff;
+    border-bottom: 1px solid #fff;
     overflow: hidden;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
@@ -62,10 +62,13 @@
     margin-top: 30%;
 }
 
+.profile-detail .box strong {
+    color: aqua;
+}
+
 .profile-detail h3 {
     text-decoration: underline;
     font-family: 'Times New Roman', Times, serif;
-    padding-top: 2%;
     color: #fff;
 }
 
@@ -88,13 +91,103 @@
     white-space: nowrap;
     overflow: hidden;
     margin-left: 27%;
-    animation: typing 3s steps(30,end) forwards, 
-    blink 0.5s infinite;   
+    animation: typing 3s steps(30, end) forwards,
+        blink 0.5s infinite;
 }
 
 @keyframes typing {
-    from {width: 0;} 
-    to {width: 22.5ch;}
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 22.8ch;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-container .nav {
+        display: flex;
+        justify-content: end;
+        gap: 40px;
+        width: 100%;
+        margin-bottom: 5%;
+        padding: 15px;
+        position: fixed;
+        right: 0;
+        z-index: 1;
+        background-color: rgba(126, 121, 121, 0.597);
+        box-shadow: -1px 1px 30px 10px rgba(0, 0, 0, 0.63);
+        overflow: hidden;
+    }
+
+    .profile-container a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bolder;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 13px;
+    }
+
+    .profile-detail {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .profile-detail img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        box-shadow: -1px 1px 20px 1px rgb(207, 212, 45);
+    }
+
+    .profile-detail .box {
+        text-align: center;
+    }
+
+    .profile-container #box1 {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 23.6ch;
+        }
+    }
+
+    .profile-detail h3 {
+        text-decoration: underline;
+        font-family: 'Times New Roman', Times, serif;
+        color: #fff;
+    }
+
+    .profile-detail p {
+        padding: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .profile-detail h2 {
+        font-family: 'Times New Roman', Times, serif;
+        color: aqua;
+        font-size: 19px;
+
+    }
+
+    .profile-detail .typing {
+        width: 0;
+        font-size: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 3s steps(30, end) forwards,
+            blink 0.5s infinite;
+    }
 }
 
 /*end*/
@@ -186,8 +279,8 @@
 }
 
 .skill-container .back-page {
-    background-color: #1e272e;
-    color: #fff;
+    background-color: #0fbcf9;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,9 +302,77 @@
 
 .skill-container .card-description {
     font-size: 1rem;
-    color: #ccc;
+    color: black;
     margin-bottom: 20px;
     line-height: 1.6;
+}
+
+@media (max-width:760px) {
+    .skill-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+        top: 50px;
+        background-color: #1e272e;
+        gap: 20px;
+        margin-top: -100px;
+        padding: 8%;
+    }
+
+    .skill-container .card {
+        width: 200px;
+        height: 250px;
+        transform-style: preserve-3d;
+        transition: transform .8s ease-in-out;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+            -5px -5px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        background-color: black;
+    }
+
+    .skill-container .card-title {
+        font-style: 2rem;
+        font-size: 20px;
+        position: relative;
+        top: 140px;
+        font-weight: bold;
+    }
+
+    .skill-container .card-subtitle {
+        font-size: 15px;
+        margin-top: 5px;
+        position: relative;
+        top: 140px;
+        color: #0fbcf9;
+    }
+
+    .skill-container .front-page {
+        position: absolute;
+        background-image: url(image/html.jpg);
+        background-size: 350px;
+        background-color: black;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 50%;
+        backface-visibility: hidden;
+        border-radius: 15px;
+    }
+
+    .skill-container .card-content h3 {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .skill-container .card-description {
+        font-size: .8rem;
+        color: black;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
 }
 
 /*end*/
@@ -219,7 +380,7 @@
 .about-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    background: linear-gradient(180deg,#1e272e);
+    background: linear-gradient(180deg, #1e272e);
     text-align: center;
     height: 1000px;
     z-index: -1;
@@ -231,7 +392,10 @@
     margin-top: 10%;
     padding: 20px;
     border-radius: 40px;
-    background-color: black;
+}
+
+.about-container #about1 {
+    margin-top: 70%;
 }
 
 .about-container .about-box h2,
@@ -250,4 +414,32 @@ p {
     margin-bottom: 50px;
     border-radius: 50px;
     text-decoration: none;
+}
+
+.about-container .about-box .social-media .icon i:hover {
+    color: aquamarine;
+}
+
+@media (max-width:760px) {
+    .about-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        background: linear-gradient(180deg, #1e272e);
+        text-align: center;
+        height: 1000px;
+        z-index: -1;
+        overflow: hidden;
+        padding: 50px;
+    }
+
+    .about-container #about1 {
+        margin-top: 0%;
+    }
+
+    .about-container .about-box .social-media .icon i {
+        font-size: 30px;
+        color: white;
+        margin-top: 20px;
+    }
+
 }
